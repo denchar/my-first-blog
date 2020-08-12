@@ -1,4 +1,4 @@
-import days as days
+##import days as days
 from django.db import models
 import datetime
 from django.utils import timezone
@@ -13,6 +13,7 @@ class Article(models.Model):
         return self.article_title
 
     def was_published_recently(self):
+        import days
         return self.pub_date >= (timezone.now() - datetime.timedelta(days - 7))
 
     class Meta:
