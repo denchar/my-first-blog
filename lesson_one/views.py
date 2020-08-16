@@ -8,7 +8,7 @@ from .models import Article, Comment
 def view(request):
     view = "template_two"
     view2 = " charden "
-    html = get_template("myView.html").render({
+    html = get_template("myview.html").render({
         'name': view,
         'secondname': view2,
         "title": "My Title",
@@ -38,4 +38,4 @@ def show(request):
 
 def show2(request):
     sname = "second name write"
-    return HttpResponse(get_template("myView.html").render({"name": 0, "secondname": sname}))
+    return HttpResponse(get_template("myview.html").render({"name": 0, "secondname": sname}))
